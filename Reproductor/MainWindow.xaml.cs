@@ -27,12 +27,14 @@ namespace Reproductor
 
         private void Trailer2RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            ReproductorMediaElement.Source= new Uri(@"trailer2.mp4");
+            ReproductorMediaElement.Source= new Uri(@"C:\Users\alumno\source\repos\Reproductor\Reproductor\trailer2.mp4");
+            ReproductorMediaElement.Play();
         }
 
         private void Trailer1RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            ReproductorMediaElement.Source = new Uri(@"trailer1.mp4");
+            ReproductorMediaElement.Source = new Uri(@"C:\Users\alumno\source\repos\Reproductor\Reproductor\trailer1.mp4");
+            ReproductorMediaElement.Play();
         }
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
@@ -50,9 +52,14 @@ namespace Reproductor
             ReproductorMediaElement.Stop();
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        private void SilenciarCheckBox_Checked(object sender, RoutedEventArgs e)
         {
+            ReproductorMediaElement.Volume = 0;
+        }
 
+        private void SilenciarCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ReproductorMediaElement.Volume = 0.5;
         }
     }
 }
