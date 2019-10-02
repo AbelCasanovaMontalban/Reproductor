@@ -28,14 +28,8 @@ namespace Reproductor
         private void TrailerRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             RadioButton radioboton = sender as RadioButton;
-            if (radioboton.Name== "Trailer1RadioButton")
-            {
-                ReproductorMediaElement.Source = new Uri(Environment.CurrentDirectory + "\\trailer1.mp4");
-            }
-            else
-            {
-                ReproductorMediaElement.Source = new Uri(Environment.CurrentDirectory + "\\trailer2.mp4");
-            }
+            
+            ReproductorMediaElement.Source = new Uri("C:/Users/alumno/source/repos/Reproductor/Reproductor/" + radioboton.Tag);
             ReproductorMediaElement.Play();
         }
 
