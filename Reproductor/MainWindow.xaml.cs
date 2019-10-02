@@ -40,22 +40,19 @@ namespace Reproductor
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            Button boton = sender as Button;
-            if (boton.Name=="PlayButton")
-            {
-                ReproductorMediaElement.Play();
-            }
-            else if (boton.Name=="PauseButton")
-            {
-                ReproductorMediaElement.Pause();
-            }
-            else
-            {
-                ReproductorMediaElement.Stop();
-            }
+            ReproductorMediaElement.Play();
+        }
 
+        private void PauseButton_Click(object sender, RoutedEventArgs e)
+        {
+            ReproductorMediaElement.Pause();
+        }
+
+        private void StopButton_Click(object sender, RoutedEventArgs e)
+        {
+            ReproductorMediaElement.Stop();
         }
 
         private void SilenciarCheckBox_CheckedOrNot(object sender, RoutedEventArgs e)
