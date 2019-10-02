@@ -8,7 +8,7 @@
         Title="Reproductor (Star Wars IX)" Height="450" Width="800" Icon="128 (1).ico">
     <DockPanel>
         <StackPanel DockPanel.Dock="Bottom" Margin="5" Orientation="Horizontal">
-            <CheckBox x:Name="SilenciarCheckBox" Checked="SilenciarCheckBox_Checked" Unchecked="SilenciarCheckBox_Unchecked">Silenciar</CheckBox>
+            <CheckBox x:Name="SilenciarCheckBox" Checked="SilenciarCheckBox_Checked" Unchecked="SilenciarCheckBox_Unchecked">Mute</CheckBox>
         </StackPanel>
         <DockPanel DockPanel.Dock="Right" Margin="12,0,16,0" LastChildFill="False">
             <Button x:Name="PlayButton" Margin="0,7" DockPanel.Dock="Top" Click="PlayButton_Click">Play</Button>
