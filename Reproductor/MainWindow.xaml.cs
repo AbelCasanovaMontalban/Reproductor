@@ -25,17 +25,20 @@ namespace Reproductor
             InitializeComponent();
         }
 
-        private void Trailer2RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void TrailerRadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            ReproductorMediaElement.Source= new Uri(@"C:\Users\alumno\source\repos\Reproductor\Reproductor\trailer2.mp4");
+            RadioButton radioboton = sender as RadioButton;
+            if (radioboton.Name== "Trailer1RadioButton")
+            {
+                ReproductorMediaElement.Source = new Uri(@"C:\Users\alumno\source\repos\Reproductor\Reproductor\trailer1.mp4");
+            }
+            else
+            {
+                ReproductorMediaElement.Source = new Uri(@"C:\Users\alumno\source\repos\Reproductor\Reproductor\trailer2.mp4");
+            }
             ReproductorMediaElement.Play();
         }
 
-        private void Trailer1RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            ReproductorMediaElement.Source = new Uri(@"C:\Users\alumno\source\repos\Reproductor\Reproductor\trailer1.mp4");
-            ReproductorMediaElement.Play();
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

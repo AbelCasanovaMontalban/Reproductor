@@ -14,8 +14,8 @@
             <Button x:Name="PlayButton" Margin="8,10,4,4" DockPanel.Dock="Top" Click="Button_Click">Play</Button>
             <Button x:Name="PauseButton" Margin="8,4,4,4" DockPanel.Dock="Top" Click="Button_Click">Pause</Button>
             <Button x:Name="StopButton" Margin="8,4,4,0" DockPanel.Dock="Top" Click="Button_Click">Stop</Button>
-            <RadioButton x:Name="Trailer2RadioButton" Margin="5,0,26,6" DockPanel.Dock="Bottom" Checked="Trailer2RadioButton_Checked" >Trailer 2</RadioButton>
-            <RadioButton x:Name="Trailer1RadioButton" Margin="5,0,26,5" DockPanel.Dock="Bottom" Checked="Trailer1RadioButton_Checked" >Trailer 1</RadioButton>
+            <RadioButton x:Name="Trailer2RadioButton" Margin="5,0,26,6" DockPanel.Dock="Bottom" Checked="TrailerRadioButton_Checked" >Trailer 2</RadioButton>
+            <RadioButton x:Name="Trailer1RadioButton" Margin="5,0,26,5" DockPanel.Dock="Bottom" Checked="TrailerRadioButton_Checked" >Trailer 1</RadioButton>
         </DockPanel>
         <Border Padding="0,20" Margin="5" BorderThickness="1" BorderBrush="Black">
             <MediaElement x:Name="ReproductorMediaElement" LoadedBehavior="Manual"></MediaElement>
