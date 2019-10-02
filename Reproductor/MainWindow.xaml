@@ -7,15 +7,15 @@
         mc:Ignorable="d"
         Title="Reproductor (Star Wars IX)" Height="450" Width="800" Icon="128 (1).ico">
     <DockPanel>
-        <StackPanel DockPanel.Dock="Bottom" Margin="5" Orientation="Horizontal">
+        <StackPanel DockPanel.Dock="Bottom" Margin="6" Orientation="Horizontal">
             <CheckBox x:Name="SilenciarCheckBox" Checked="SilenciarCheckBox_Checked" Unchecked="SilenciarCheckBox_Unchecked">Mute</CheckBox>
         </StackPanel>
-        <DockPanel DockPanel.Dock="Right" Margin="12,0,16,0" LastChildFill="False">
-            <Button x:Name="PlayButton" Margin="0,7" DockPanel.Dock="Top" Click="PlayButton_Click">Play</Button>
-            <Button x:Name="PauseButton" Margin="0,7" DockPanel.Dock="Top" Click="PauseButton_Click">Pause</Button>
-            <Button x:Name="StopButton" Margin="0,7" DockPanel.Dock="Top" Click="StopButton_Click">Stop</Button>
-            <RadioButton x:Name="Trailer2RadioButton" Margin="0,5" DockPanel.Dock="Bottom" Checked="Trailer2RadioButton_Checked" >Trailer 2</RadioButton>
-            <RadioButton x:Name="Trailer1RadioButton" Margin="0,5" DockPanel.Dock="Bottom" Checked="Trailer1RadioButton_Checked" >Trailer 1</RadioButton>
+        <DockPanel DockPanel.Dock="Right" Margin="8,0,8,0" LastChildFill="False">
+            <Button x:Name="PlayButton" Margin="8,10,4,4" DockPanel.Dock="Top" Click="PlayButton_Click">Play</Button>
+            <Button x:Name="PauseButton" Margin="8,4,4,4" DockPanel.Dock="Top" Click="PauseButton_Click">Pause</Button>
+            <Button x:Name="StopButton" Margin="8,4,4,0" DockPanel.Dock="Top" Click="StopButton_Click">Stop</Button>
+            <RadioButton x:Name="Trailer2RadioButton" Margin="5,0,26,6" DockPanel.Dock="Bottom" Checked="Trailer2RadioButton_Checked" >Trailer 2</RadioButton>
+            <RadioButton x:Name="Trailer1RadioButton" Margin="5,0,26,5" DockPanel.Dock="Bottom" Checked="Trailer1RadioButton_Checked" >Trailer 1</RadioButton>
         </DockPanel>
         <Border Padding="0,20" Margin="5" BorderThickness="1" BorderBrush="Black">
             <MediaElement x:Name="ReproductorMediaElement" LoadedBehavior="Manual"></MediaElement>

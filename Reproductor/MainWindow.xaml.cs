@@ -54,12 +54,12 @@ namespace Reproductor
 
         private void SilenciarCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            ReproductorMediaElement.Volume = 0;
+            ReproductorMediaElement.IsMuted = true;
         }
 
         private void SilenciarCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            ReproductorMediaElement.Volume = 0.5;
+            ReproductorMediaElement.IsMuted = false ;
         }
     }
 }
