@@ -37,29 +37,36 @@ namespace Reproductor
             ReproductorMediaElement.Play();
         }
 
-        private void PlayButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ReproductorMediaElement.Play();
+            Button boton = sender as Button;
+            if (boton.Name=="PlayButton")
+            {
+                ReproductorMediaElement.Play();
+            }
+            else if (boton.Name=="PauseButton")
+            {
+                ReproductorMediaElement.Pause();
+            }
+            else
+            {
+                ReproductorMediaElement.Stop();
+            }
+
         }
 
-        private void PauseButton_Click(object sender, RoutedEventArgs e)
+        private void SilenciarCheckBox_CheckedOrNot(object sender, RoutedEventArgs e)
         {
-            ReproductorMediaElement.Pause();
-        }
-
-        private void StopButton_Click(object sender, RoutedEventArgs e)
-        {
-            ReproductorMediaElement.Stop();
-        }
-
-        private void SilenciarCheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            ReproductorMediaElement.IsMuted = true;
-        }
-
-        private void SilenciarCheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            ReproductorMediaElement.IsMuted = false ;
+            CheckBox silenciar = sender as CheckBox;
+            if (silenciar.IsChecked==true)
+            {
+                ReproductorMediaElement.IsMuted = true;
+            }
+            else
+            {
+                ReproductorMediaElement.IsMuted = false;
+            }
+            
         }
     }
 }
